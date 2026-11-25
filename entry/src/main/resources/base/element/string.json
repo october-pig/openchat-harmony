@@ -1,0 +1,17 @@
+{
+  "string": [
+    { "name": "microphone_reason", "value": "录制语音并将其转换为聊天文字" },
+    {
+      "name": "module_desc",
+      "value": "OpenChat Harmony"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "DeepSeek API 聊天客户端"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "OpenChat Harmony"
+    }
+  ]
+}
