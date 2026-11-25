@@ -481,3 +481,19 @@ Apache License
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+------------------------------------------------------------------------
+
+Whale-girl home screen icons (Sleepy, Happy, Focused)
+
+Original character: 上善无形 (上善), https://www.pixiv.net/users/62155430
+Maid redesign: ZipZipPipe, https://www.pixiv.net/users/18604994
+Icon artwork: Small-tailqwq, dsh-deep-whale / Maid Atelier
+Source: https://github.com/Small-tailqwq/dsh-deep-whale/tree/a9e2884388122be47a7c737c18b98ac4896d7c27/maid-atelier/assets/icons
+Upstream attribution: https://github.com/Small-tailqwq/dsh-deep-whale/blob/a9e2884388122be47a7c737c18b98ac4896d7c27/maid-atelier/NOTICE
+
+Changes by openchat: resized and centered the existing transparent
+artwork on a light blue square to create HarmonyOS icon resources.
+
+These icons are licensed under Creative Commons Attribution-NonCommercial-
+ShareAlike 4.0 International, https://creativecommons.org/licenses/by-nc-sa/4.0/.

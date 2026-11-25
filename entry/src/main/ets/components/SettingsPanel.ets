@@ -1,4 +1,6 @@
+import { deviceInfo } from '@kit.BasicServicesKit';
 import { Palette } from './Theme';
+import { AppIconPicker } from './AppIconPicker';
 import { DemoIcon } from './Icon';
 import { CONTROL_MOTION, PRESS_EFFECT } from './Motion';
 import { PROVINCES, Province } from '../model/Locations';
@@ -112,6 +114,9 @@ export struct SettingsPanel {
         Row() {
           this.themeOption(this.t('跟随系统', 'System'), $r('app.media.demo_system'), 'system')
         }.width('100%').margin({ bottom: 10 })
+      }
+      if (deviceInfo.sdkApiVersion >= 26) {
+        AppIconPicker({ palette: this.palette, english: this.english })
       }
       Row() {
         Text(this.t('语言', 'Language')).fontColor(this.palette.ink).fontSize(14).layoutWeight(1)

@@ -5,6 +5,11 @@
     "versionCode": 1000000,
     "versionName": "1.0.0",
     "icon": "$media:layered_image",
+    "alternateIcons": [
+      { "name": "whale_sleepy", "icon": "$media:whale_icon_sleepy" },
+      { "name": "whale_delighted", "icon": "$media:whale_icon_delighted" },
+      { "name": "whale_determined", "icon": "$media:whale_icon_determined" }
+    ],
     "label": "$string:app_name"
   }
 }

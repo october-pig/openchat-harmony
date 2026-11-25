@@ -3,7 +3,7 @@
     { "name": "microphone_reason", "value": "录制语音并将其转换为聊天文字" },
     {
       "name": "module_desc",
-      "value": "OpenChat Harmony"
+      "value": "openchat"
     },
     {
       "name": "EntryAbility_desc",
@@ -11,7 +11,7 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "OpenChat Harmony"
+      "value": "openchat"
     }
   ]
 }
