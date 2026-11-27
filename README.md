@@ -2,6 +2,18 @@
 
 [DeepSeek 开源 Chat Demo](https://github.com/deepseek-ai/chat-demo) 的非官方 HarmonyOS 原生移植。项目使用 ArkTS 和 ArkUI，支持手机、平板和 2 合 1 设备。构建目标为 HarmonyOS 7.0（API 26），最低兼容 HarmonyOS 6.1（API 23）。
 
+## 侧载安装
+
+前往 [GitHub Releases](https://github.com/october-pig/openchat-harmony/releases) 下载最新版本的 `openchat-<version>-unsigned.hap`（最低兼容 HarmonyOS 6.1 / API 23）。
+
+由于 HarmonyOS 调试签名强绑定设备 UDID，无法直接分发适用于所有手机的已签名包；本项目仅申请了网络和麦克风权限，不包含受限权限，使用个人华为账号即可完成自签安装：
+
+1. 在手机「设置」中开启**开发者模式**，并打开 **USB 调试**（或**无线调试**）。
+2. 在电脑上使用社区重签侧载工具（如 Auto-Installer、HapSign、Hap-Installer）或 DevEco Studio，登录已实名认证的个人华为开发者账号，导入下载的未签名 `.hap` 自动签名并安装到手机。
+3. 实名认证个人账号签发的调试证书有效期通常为 180 天（未实名 14 天），到期后重新签名覆盖安装即可，不会清除本地聊天记录与密钥。
+
+首启进入设置的「数据管理」，输入在 [DeepSeek 开放平台](https://platform.deepseek.com/api_keys) 创建的 API Key，验证通过后即可聊天。请求直接发往 DeepSeek，密钥由 HarmonyOS 关键资产服务保存，聊天记录写入应用沙箱。
+
 ## 运行
 
 在 DevEco Studio 安装 API 26 SDK 并打开本目录。连接 API 23 或以上的模拟器后，可使用 DevEco CLI 构建和运行。
@@ -11,9 +23,13 @@ devecocli build
 devecocli run
 ```
 
-首启进入设置的「数据管理」。输入在 [DeepSeek 开放平台](https://platform.deepseek.com/api_keys) 创建的 API Key，验证通过后即可聊天。请求直接发往 DeepSeek。密钥由 HarmonyOS 关键资产服务保存，聊天记录写入应用沙箱。
+如需在本地生成用于侧载分发的未签名 Release HAP，可执行：
 
-仓库里的构建配置可生成未签名的调试 HAP。安装到真机前，请在 DevEco Studio 为本机配置调试签名，并把生成的签名配置留在本地。
+```sh
+devecocli build --build-mode release --assemble-type assembleHap
+```
+
+仓库里的构建配置默认生成未签名 HAP。安装到真机调试前，请在 DevEco Studio 为本机配置调试签名，并把生成的签名配置留在本地。
 
 ## 移植范围
 
